@@ -20,9 +20,12 @@
 
     <?php
     require 'configDB.php';
-
-    $query = $pdo->query('SELECT * FROM `tasks`');
-    while (){}
+    echo '<ul>';
+    $query = $pdo->query('SELECT * FROM `tasks` ORDER BY `id` desc');
+    while ($row = $query->fetch(PDO::FETCH_OBJ)){
+        echo '<li><b>'.$row->task.'</b><a href="/delete.php?id='.$row->id.'"><button>Delete</button></a></li>';
+    }
+    echo '</ul>';
     ?>
 </div>
 </body>
