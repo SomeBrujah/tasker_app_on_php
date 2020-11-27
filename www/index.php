@@ -21,7 +21,7 @@
     <?php
     require 'configDB.php';
 
-    $query = $pdo->
+    $query = $pdo->query('SELECT * FROM `tasks`');
     ?>
 </div>
 </body>
