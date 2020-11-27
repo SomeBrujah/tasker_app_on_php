@@ -17,6 +17,12 @@
         <input type="text" name="task" id="task" placeholder="Need to do ..." class="form-control">
         <button type="submit" name="sendTask" class="btn btn-success">Send</button>
     </form>
+
+    <?php
+    require 'configDB.php';
+
+    $query = $pdo->
+    ?>
 </div>
 </body>
 </html>
